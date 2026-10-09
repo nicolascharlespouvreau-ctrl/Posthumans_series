@@ -125,11 +125,17 @@
   .tee:nth-child(2) { width: 250px; margin-bottom: 0; }
   .tee:nth-child(1) { transform: rotate(-4deg); margin-bottom: 1.2rem; }
   .tee:nth-child(3) { transform: rotate(4deg); margin-bottom: 1.2rem; }
+  .tee img { width: 100%; height: auto; display: block; }
+  .tee figcaption { text-align: center; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-dim); margin-top: 0.7rem; }
+  .tee.poster { width: 250px; }
+  .tee.poster img { border: 1px solid var(--toxic-dim); }
+  .tee:nth-child(2) { transform: none; }
   .merch-note { text-align: center; font-size: 0.85rem; color: var(--ink-dim); max-width: 40ch; margin: 0 auto; }
   @media (max-width: 640px) {
     .tee-grid { gap: 1.2rem; }
     .tee { width: 30vw; min-width: 96px; }
     .tee:nth-child(2) { width: 34vw; min-width: 108px; }
+    .tee.poster { width: 34vw; }
   }
 
   /* ---------- FOOTER ---------- */
@@ -310,65 +316,11 @@
   <section class="merch">
     <div class="section-label">Naturals rewards</div>
     <h2>More than merch</h2>
-    <p class="sub">Reward tiers will come with real rewards — posters, prints, and apparel carrying the Posthumans mark.</p>
+    <p class="sub">Rewards will include posters, prints and apparel carrying the Posthumans mark.</p>
     <div class="tee-grid">
-      <div class="tee"><svg viewBox="0 0 300 340" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <clipPath id="print-1"><rect x="90" y="70" width="120" height="150"/></clipPath>
-        <linearGradient id="fabric-1" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#2e3436"/>
-          <stop offset="1" stop-color="#181c1d"/>
-        </linearGradient>
-        <radialGradient id="glow-1" cx="50%" cy="45%" r="60%">
-          <stop offset="0" stop-color="#1c2420"/>
-          <stop offset="100%" stop-color="#111511" stop-opacity="0"/>
-        </radialGradient>
-      </defs>
-      <ellipse cx="150" cy="170" rx="155" ry="175" fill="url(#glow-1)"/>
-      <path d="M95,10 L55,0 L2,55 L35,95 L58,80 L58,330 L242,330 L242,80 L265,95 L298,55 L245,0 L205,10
-               C203,42 180,62 150,62 C120,62 97,42 95,10 Z"
-            fill="url(#fabric-1)" stroke="rgba(139,224,106,0.55)" stroke-width="2"/>
-      <image href="images/img-09.png" x="70" y="60" width="160" height="73.4"
-             clip-path="url(#print-1)" preserveAspectRatio="xMidYMid meet"/>
-    </svg></div>
-      <div class="tee"><svg viewBox="0 0 300 340" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <clipPath id="print-2"><rect x="90" y="70" width="120" height="150"/></clipPath>
-        <linearGradient id="fabric-2" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#2e3436"/>
-          <stop offset="1" stop-color="#181c1d"/>
-        </linearGradient>
-        <radialGradient id="glow-2" cx="50%" cy="45%" r="60%">
-          <stop offset="0" stop-color="#1c2420"/>
-          <stop offset="100%" stop-color="#111511" stop-opacity="0"/>
-        </radialGradient>
-      </defs>
-      <ellipse cx="150" cy="170" rx="155" ry="175" fill="url(#glow-2)"/>
-      <path d="M95,10 L55,0 L2,55 L35,95 L58,80 L58,330 L242,330 L242,80 L265,95 L298,55 L245,0 L205,10
-               C203,42 180,62 150,62 C120,62 97,42 95,10 Z"
-            fill="url(#fabric-2)" stroke="rgba(139,224,106,0.55)" stroke-width="2"/>
-      <image href="images/img-09.png" x="70" y="60" width="160" height="73.4"
-             clip-path="url(#print-2)" preserveAspectRatio="xMidYMid meet"/>
-    </svg></div>
-      <div class="tee"><svg viewBox="0 0 300 340" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <clipPath id="print-3"><rect x="90" y="70" width="120" height="150"/></clipPath>
-        <linearGradient id="fabric-3" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#2e3436"/>
-          <stop offset="1" stop-color="#181c1d"/>
-        </linearGradient>
-        <radialGradient id="glow-3" cx="50%" cy="45%" r="60%">
-          <stop offset="0" stop-color="#1c2420"/>
-          <stop offset="100%" stop-color="#111511" stop-opacity="0"/>
-        </radialGradient>
-      </defs>
-      <ellipse cx="150" cy="170" rx="155" ry="175" fill="url(#glow-3)"/>
-      <path d="M95,10 L55,0 L2,55 L35,95 L58,80 L58,330 L242,330 L242,80 L265,95 L298,55 L245,0 L205,10
-               C203,42 180,62 150,62 C120,62 97,42 95,10 Z"
-            fill="url(#fabric-3)" stroke="rgba(139,224,106,0.55)" stroke-width="2"/>
-      <image href="images/img-09.png" x="70" y="60" width="160" height="73.4"
-             clip-path="url(#print-3)" preserveAspectRatio="xMidYMid meet"/>
-    </svg></div>
+      <figure class="tee"><img src="images/merch-tshirt.webp" alt="Posthumans black T-shirt with the skull artwork and the line Death was never the enemy" loading="lazy" width="900" height="900"><figcaption>T-shirt</figcaption></figure>
+      <figure class="tee poster"><img src="images/merch-poster.jpg" alt="Posthumans series poster: a skull of toxic cloud above a dark city" loading="lazy" width="1000" height="1411"><figcaption>Poster</figcaption></figure>
+      <figure class="tee"><img src="images/merch-tote.webp" alt="Posthumans black tote bag with the skull artwork" loading="lazy" width="900" height="900"><figcaption>Tote bag</figcaption></figure>
     </div>
     <p class="merch-note">Final reward tiers and designs will be confirmed when the funding campaign goes live.</p>
   </section>
