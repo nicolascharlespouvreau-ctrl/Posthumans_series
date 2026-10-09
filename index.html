@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Posthumans: dystopian sci-fi series by a former Marine | Vote</title>
+<meta name="description" content="Posthumans is a dystopian sci-fi series written by a former French Marine. Death is defeated, but only for an elite. Vote free (one click, no donation) to make it exist.">
+<link rel="canonical" href="https://YOUR-DOMAIN/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Posthumans: death was never the enemy">
+<meta property="og:description" content="A dystopian sci-fi series by a former French Marine. Vote free, one click, to make it exist.">
+<meta property="og:image" content="https://YOUR-DOMAIN/images/img-01.jpg">
+<meta property="og:url" content="https://YOUR-DOMAIN/">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWorkSeries","name":"Posthumans","genre":["Science fiction","Dystopia"],"author":{"@type":"Person","name":"Nicolas Pouvreau","alternateName":"Nfavst"},"description":"A dystopian sci-fi series. Death is defeated, but only for an elite."}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --void: #080a08;
+    --panel: #0d100d;
+    --panel-2: #111511;
+    --ink: #e9e7df;
+    --ink-dim: #93938a;
+    --toxic: #8be06a;
+    --toxic-dim: rgba(139,224,106,0.28);
+    --ember: #e05a46;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  * { box-sizing: inherit; margin: 0; padding: 0; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
+  html, body { background: var(--void); }
+  body { font-family: 'Work Sans', sans-serif; color: var(--ink); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+
+  .wordmark { font-size: 0.78rem; letter-spacing: 0.32em; color: var(--toxic); text-transform: uppercase; font-weight: 500; }
+  .section-label { font-size: 0.72rem; letter-spacing: 0.18em; color: var(--toxic); text-transform: uppercase; margin-bottom: 0.9rem; }
+
+  /* ---------- HERO ---------- */
+  .hero { position: relative; min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; padding: 24px 6vw 8vh; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: 0; background-image: url('images/img-01.jpg'); background-size: cover; background-position: center 30%; filter: saturate(0.95) brightness(0.62); animation: heroreveal 2.4s ease-out both; }
+  .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,8,6,0.6) 0%, rgba(6,8,6,0.1) 28%, rgba(6,8,6,0.4) 58%, rgba(4,6,4,0.97) 100%); }
+  @keyframes heroreveal { from { opacity: 0; transform: scale(1.04); } to { opacity: 1; transform: scale(1); } }
+  .hero-top { position: relative; z-index: 2; display: flex; justify-content: space-between; align-items: center; }
+  .hero-top .by { font-size: 0.72rem; color: var(--ink-dim); letter-spacing: 0.08em; }
+  .hero-content { position: relative; z-index: 2; max-width: 760px; margin-top: auto; }
+  .hero-tagline { font-family: 'Space Grotesk', sans-serif; font-weight: 700; text-transform: uppercase; font-size: clamp(1.9rem, 5.6vw, 3.8rem); line-height: 1.1; letter-spacing: 0.01em; margin-bottom: 1.1rem; animation: fadeup 1.4s 0.4s ease-out both; }
+  .hero-logline { font-size: 1.02rem; line-height: 1.6; color: var(--ink-dim); max-width: 46ch; font-weight: 300; animation: fadeup 1.4s 0.7s ease-out both; }
+  @keyframes fadeup { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+  .socials { position: relative; z-index: 2; margin-top: 2.2rem; display: flex; gap: 1.8rem; flex-wrap: wrap; }
+  .hero .socials { animation: fadeup 1.4s 1s ease-out both; }
+  .socials a { text-decoration: none; font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; padding-bottom: 4px; border-bottom: 1px solid var(--toxic-dim); transition: border-color .25s ease, color .25s ease; }
+  .socials a:hover { color: var(--toxic); border-color: var(--toxic); }
+
+  /* ---------- PREMISE ---------- */
+  .premise { padding: 7rem 6vw 5.5rem; max-width: 980px; }
+  .premise h2 { font-family: 'Fraunces', serif; font-style: italic; font-weight: 400; font-size: clamp(1.8rem, 4.6vw, 3rem); line-height: 1.2; margin-bottom: 1.6rem; }
+  .premise p { color: var(--ink-dim); font-weight: 300; line-height: 1.7; max-width: 52ch; margin-bottom: 1rem; }
+  .premise .fans { font-size: 0.85rem; letter-spacing: 0.04em; color: var(--ink); margin-top: 1.4rem; }
+
+  /* ---------- CHARACTERS ---------- */
+  .characters { padding: 2rem 6vw 6rem; }
+  .characters h2, .world h2, .creator h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: 0.6rem; }
+  .characters .sub { color: var(--ink-dim); font-weight: 300; margin-bottom: 3rem; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 2.2rem 2rem; }
+  .card { display: grid; grid-template-columns: 40% 1fr; gap: 1.4rem; align-items: start; }
+  .card .portrait { border: 1px solid var(--toxic-dim); overflow: hidden; aspect-ratio: 4 / 5; background: var(--panel); }
+  .card .portrait img { width: 100%; height: 100%; object-fit: cover; }
+  .card .portrait.masked { display: flex; align-items: center; justify-content: center; position: relative; background: repeating-linear-gradient(0deg, #0b0e0b 0, #0b0e0b 3px, #101410 3px, #101410 6px); }
+  .card .portrait.masked span { font-family: 'Space Grotesk', sans-serif; font-weight: 600; letter-spacing: 0.28em; font-size: 0.72rem; color: var(--ember); border: 1px solid var(--ember); padding: 0.45rem 0.7rem; transform: rotate(-8deg); }
+  .card h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; text-transform: uppercase; font-size: 1.35rem; letter-spacing: 0.04em; margin-bottom: 0.9rem; }
+  .card dl { display: grid; gap: 0.7rem; }
+  .card dt { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--toxic); margin-bottom: 0.15rem; }
+  .card dd { font-size: 0.95rem; line-height: 1.5; color: var(--ink-dim); font-weight: 300; }
+  .redacted { background: var(--ink); color: transparent; user-select: none; padding: 0 0.3em; }
+
+  /* ---------- WORLD ---------- */
+  .world { background: var(--void); padding: 5rem 6vw 4rem; border-top: 1px solid rgba(233,231,223,0.06); }
+  .file { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; padding: 3.2rem 0; border-top: 1px solid rgba(233,231,223,0.08); }
+  .file:last-of-type { border-bottom: 1px solid rgba(233,231,223,0.08); }
+  .file.reverse { direction: rtl; }
+  .file.reverse > * { direction: ltr; }
+  .file-image { border: 1px solid var(--toxic-dim); overflow: hidden; aspect-ratio: 4 / 3; }
+  .file-image img { width: 100%; height: 100%; object-fit: cover; }
+  .file-title { font-family: 'Fraunces', serif; font-weight: 500; font-size: clamp(1.6rem, 3vw, 2.3rem); margin-bottom: 1rem; }
+  .file-desc { color: var(--ink-dim); line-height: 1.7; font-weight: 300; max-width: 42ch; }
+  .file-quote { margin-top: 1.4rem; font-family: 'Fraunces', serif; font-style: italic; color: var(--toxic); font-size: 1.05rem; }
+
+  /* ---------- CREATOR ---------- */
+  .creator { background: var(--panel); padding: 6rem 6vw; border-top: 1px solid rgba(139,224,106,0.12); }
+  .creator-grid { display: grid; grid-template-columns: minmax(240px, 380px) 1fr; gap: 4rem; align-items: start; margin-top: 2.4rem; }
+  .creator-photo { border: 1px solid var(--toxic-dim); overflow: hidden; aspect-ratio: 4 / 5; }
+  .creator-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .creator-line { margin-bottom: 1.8rem; }
+  .creator-line { font-family: 'Fraunces', serif; font-style: italic; font-size: clamp(1.6rem, 3.6vw, 2.4rem); line-height: 1.25; }
+  .creator-text p { color: var(--ink-dim); font-weight: 300; line-height: 1.75; margin-bottom: 1.1rem; max-width: 52ch; }
+  .creator-text .sig { color: var(--ink); font-family: 'Space Grotesk', sans-serif; font-weight: 600; letter-spacing: 0.06em; margin-top: 1.4rem; }
+
+  /* ---------- JOIN ---------- */
+  .join { padding: 7rem 6vw 6rem; text-align: left; max-width: 980px; }
+  .join h2 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; text-transform: uppercase; font-size: clamp(1.8rem, 5vw, 3.2rem); line-height: 1.1; margin-bottom: 1rem; }
+  .join .lead { font-size: 1.08rem; line-height: 1.6; max-width: 46ch; margin-bottom: 0.9rem; }
+  .join .slogan { font-family: 'Fraunces', serif; font-style: italic; color: var(--toxic); font-size: 1.1rem; margin-bottom: 1.6rem; }
+  .join .soon { font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-dim); margin-bottom: 1.6rem; }
+
+
+  .cta { display: inline-block; background: var(--toxic); color: #0a0d0a; text-decoration: none; font-family: 'Space Grotesk', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.9rem; padding: 1rem 1.7rem; transition: transform .2s ease, background .2s ease; }
+  .cta:hover { background: #a6f086; transform: translateY(-2px); }
+  .fine { font-size: 0.78rem; color: var(--ink-dim); margin-top: 0.8rem; line-height: 1.5; max-width: 48ch; }
+  .pill { display: inline-block; margin-top: 1.4rem; font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--toxic); border: 1px solid var(--toxic-dim); padding: 0.55rem 0.9rem; text-decoration: none; transition: border-color .25s ease, background .25s ease; animation: fadeup 1.4s 0.9s ease-out both; }
+  .pill:hover { border-color: var(--toxic); background: rgba(139,224,106,0.08); }
+  .signup { margin: 0.4rem 0 2rem; }
+
+
+  /* ---------- MERCH ---------- */
+  .merch { background: var(--panel-2, #111511); padding: 6rem 6vw; border-top: 1px solid rgba(139,224,106,0.12); }
+  .merch h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: 0.6rem; }
+  .merch .sub { color: var(--ink-dim); font-weight: 300; max-width: 46ch; margin-bottom: 3.2rem; }
+  .tee-grid { display: flex; gap: 2.5rem; flex-wrap: wrap; justify-content: center; align-items: flex-end; padding: 1rem 0 2rem; }
+  .tee { width: 220px; filter: drop-shadow(0 18px 30px rgba(0,0,0,0.55)); }
+  .tee:nth-child(2) { width: 250px; margin-bottom: 0; }
+  .tee:nth-child(1) { transform: rotate(-4deg); margin-bottom: 1.2rem; }
+  .tee:nth-child(3) { transform: rotate(4deg); margin-bottom: 1.2rem; }
+  .merch-note { text-align: center; font-size: 0.85rem; color: var(--ink-dim); max-width: 40ch; margin: 0 auto; }
+  @media (max-width: 640px) {
+    .tee-grid { gap: 1.2rem; }
+    .tee { width: 30vw; min-width: 96px; }
+    .tee:nth-child(2) { width: 34vw; min-width: 108px; }
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer { background: var(--panel); padding: 3.5rem 6vw calc(3rem + env(safe-area-inset-bottom, 0px)); border-top: 1px solid rgba(139,224,106,0.12); }
+  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; margin-bottom: 1.8rem; }
+  .footer-tag { font-family: 'Fraunces', serif; font-style: italic; color: var(--ink-dim); max-width: 38ch; line-height: 1.5; }
+  .footer-socials { display: flex; gap: 1.6rem; flex-wrap: wrap; }
+  .footer-socials a { color: var(--ink-dim); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; transition: color .25s ease; }
+  .footer-socials a:hover { color: var(--toxic); }
+  .footer-note { font-size: 0.78rem; line-height: 1.6; color: rgba(147,147,138,0.8); max-width: 62ch; margin-bottom: 1.2rem; }
+  .footer-bottom { font-size: 0.72rem; color: rgba(147,147,138,0.6); letter-spacing: 0.04em; }
+
+  @media (max-width: 760px) {
+    .file, .file.reverse { grid-template-columns: 1fr; direction: ltr; gap: 1.6rem; }
+    .creator-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .premise { padding-top: 5rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero::before, .hero-tagline, .hero-logline, .hero .socials { animation: none !important; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-top">
+      <span class="wordmark">Posthumans</span>
+      <span class="by">A series by Nfavst</span>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-tagline">Death was never the enemy.</h1>
+      <p class="hero-logline">Some of us stopped dying. The rest of us stopped mattering. This is the story of what's left.</p>
+      <a class="cta" href="https://www.edc-funding.com/fr/posthumans_series" target="_blank" rel="noopener">Vote to make it exist (free)</a>
+    </div>
+    <div class="socials">
+      <a href="https://www.instagram.com/Art_Nfavst" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@posthumans_series" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://x.com/posthumans_series" target="_blank" rel="noopener">X</a>
+    </div>
+  </section>
+
+  <section class="premise">
+    <h2>What would you pay to never die? And who would pay it for you?</h2>
+    <p>Two humanities split apart. The chosen live above a toxic cloud and no longer die. The naturals stay below and endure. One man walks between them, chasing a name he doesn't understand.</p>
+    <p class="fans">For fans of Blade Runner, Altered Carbon and Total Recall.</p>
+  </section>
+
+  <section class="characters">
+    <div class="section-label">Cast of characters</div>
+    <h2>Meet the characters</h2>
+    <p class="sub">Some faces stay hidden. For now.</p>
+    <div class="cards">
+
+      <article class="card">
+        <div class="portrait"><img src="images/img-02.jpg" alt="Jonas"></div>
+        <div>
+          <h3>Jonas</h3>
+          <dl>
+            <div><dt>Role</dt><dd>The one who keeps walking.</dd></div>
+            <div><dt>Tell</dt><dd>Drinks to stop thinking. It never works.</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="portrait"><img src="images/img-03.jpg" alt="Kalee"></div>
+        <div>
+          <h3>Kalee</h3>
+          <dl>
+            <div><dt>Role</dt><dd>She serves the drinks. She hears everything.</dd></div>
+            <div><dt>Tell</dt><dd>Never looks at the person talking.</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="portrait"><img src="images/img-04.jpg" alt="The Performer"></div>
+        <div>
+          <h3>The Performer</h3>
+          <dl>
+            <div><dt>Role</dt><dd>Part of the furniture at Totengruft.</dd></div>
+            <div><dt>Tell</dt><dd>Rehearses for an audience that left.</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="portrait masked"><span>CLASSIFIED</span></div>
+        <div>
+          <h3>Kael</h3>
+          <dl>
+            <div><dt>Role</dt><dd><span class="redacted" aria-label="redacted">redacted redacted</span></dd></div>
+            <div><dt>Tell</dt><dd>Laughs a beat too fast.</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="portrait masked"><span>UNKNOWN</span></div>
+        <div>
+          <h3>The Shadow</h3>
+          <dl>
+            <div><dt>Role</dt><dd><span class="redacted" aria-label="redacted">redacted redacted</span></dd></div>
+            <div><dt>Tell</dt><dd>Always there before you notice.</dd></div>
+          </dl>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="world">
+    <div class="section-label">Field notes</div>
+    <h2>The world so far</h2>
+
+    <div class="file">
+      <div class="file-image"><img src="images/img-05.jpg" alt="The Esplanade"></div>
+      <div>
+        <div class="section-label">Location file</div>
+        <div class="file-title">The Esplanade</div>
+        <p class="file-desc">Nobody built this place to be beautiful. It just ended up that way, the way rot sometimes does. The lights never go out here. Nobody knows who's still paying for them.</p>
+        <p class="file-quote">"Something still watches from the top."</p>
+      </div>
+    </div>
+
+    <div class="file reverse">
+      <div class="file-image"><img src="images/img-06.jpg" alt="Totengruft"></div>
+      <div>
+        <div class="section-label">Location file</div>
+        <div class="file-title">Totengruft</div>
+        <p class="file-desc">Everything else down here runs on scraps and hope. This place never flickers, never dims, never runs out. Someone's paying for that. Nobody down here can afford to ask who.</p>
+        <p class="file-quote">"Some lights never go out. Ask yourself why."</p>
+      </div>
+    </div>
+
+    <div class="file">
+      <div class="file-image"><img src="images/img-07.jpg" alt="The Watcher"></div>
+      <div>
+        <div class="section-label">Fragment</div>
+        <div class="file-title">The Watcher</div>
+        <p class="file-desc">Nobody built it. Nobody claims it. It's just always been there, watching the canyon with empty eyes, before the fall or after. Nobody agrees which.</p>
+        <p class="file-quote">"Nobody remembers who carved it. Or why."</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="creator">
+    <div class="section-label">The author</div>
+    <h2>Meet the creator</h2>
+    <div class="creator-grid">
+      <div class="creator-photo"><img src="images/img-08.jpg" alt="Nfavst, creator of Posthumans, during his years in the French Army"></div>
+      <div class="creator-body">
+        <p class="creator-line">I spent twenty years in uniform. Now I'm building a world.</p>
+        <div class="creator-text">
+          <p>I spent twenty years in the French Army, in the Troupes de Marine, with overseas deployments including Afghanistan and Lebanon. Then I changed course and moved into cinema, with roles in films and series.</p>
+          <p>Posthumans is the story I finally decided to write. The goal is simple: make it for real, with real actors and a real crew.</p>
+          <p class="sig">Nfavst</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="join" id="vote">
+    <div class="section-label">Vote campaign: 150 votes, 60 days</div>
+    <h2>Vote for Posthumans to exist.</h2>
+    <p class="lead">One click. Free. No donation, no commitment.</p>
+    <p class="slogan">The first sci-fi series built with its audience, not just for it.</p>
+    <div class="signup"><a class="cta" href="https://www.edc-funding.com/fr/posthumans_series" target="_blank" rel="noopener">Vote now</a><p class="fine">The vote runs on EDC Funding until December 6. If the 150-vote threshold is reached, the funding campaign opens and voters are told first. If not, nothing launches and no money is asked.</p></div>
+    <div class="signup" style="margin-top:1.6rem"><a class="pill" href="https://tally.so/r/NpkKBl" target="_blank" rel="noopener">Notify me at launch</a></div>
+    <div class="socials">
+      <a href="https://www.instagram.com/Art_Nfavst" target="_blank" rel="noopener">Follow on Instagram</a>
+      <a href="https://www.tiktok.com/@posthumans_series" target="_blank" rel="noopener">Follow on TikTok</a>
+      <a href="https://x.com/posthumans_series" target="_blank" rel="noopener">Follow on X</a>
+    </div>
+  </section>
+
+  <section class="merch">
+    <div class="section-label">Naturals rewards</div>
+    <h2>More than merch</h2>
+    <p class="sub">Reward tiers will come with real rewards — posters, prints, and apparel carrying the Posthumans mark.</p>
+    <div class="tee-grid">
+      <div class="tee"><svg viewBox="0 0 300 340" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <clipPath id="print-1"><rect x="90" y="70" width="120" height="150"/></clipPath>
+        <linearGradient id="fabric-1" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#2e3436"/>
+          <stop offset="1" stop-color="#181c1d"/>
+        </linearGradient>
+        <radialGradient id="glow-1" cx="50%" cy="45%" r="60%">
+          <stop offset="0" stop-color="#1c2420"/>
+          <stop offset="100%" stop-color="#111511" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <ellipse cx="150" cy="170" rx="155" ry="175" fill="url(#glow-1)"/>
+      <path d="M95,10 L55,0 L2,55 L35,95 L58,80 L58,330 L242,330 L242,80 L265,95 L298,55 L245,0 L205,10
+               C203,42 180,62 150,62 C120,62 97,42 95,10 Z"
+            fill="url(#fabric-1)" stroke="rgba(139,224,106,0.55)" stroke-width="2"/>
+      <image href="images/img-09.png" x="70" y="60" width="160" height="73.4"
+             clip-path="url(#print-1)" preserveAspectRatio="xMidYMid meet"/>
+    </svg></div>
+      <div class="tee"><svg viewBox="0 0 300 340" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <clipPath id="print-2"><rect x="90" y="70" width="120" height="150"/></clipPath>
+        <linearGradient id="fabric-2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#2e3436"/>
+          <stop offset="1" stop-color="#181c1d"/>
+        </linearGradient>
+        <radialGradient id="glow-2" cx="50%" cy="45%" r="60%">
+          <stop offset="0" stop-color="#1c2420"/>
+          <stop offset="100%" stop-color="#111511" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <ellipse cx="150" cy="170" rx="155" ry="175" fill="url(#glow-2)"/>
+      <path d="M95,10 L55,0 L2,55 L35,95 L58,80 L58,330 L242,330 L242,80 L265,95 L298,55 L245,0 L205,10
+               C203,42 180,62 150,62 C120,62 97,42 95,10 Z"
+            fill="url(#fabric-2)" stroke="rgba(139,224,106,0.55)" stroke-width="2"/>
+      <image href="images/img-09.png" x="70" y="60" width="160" height="73.4"
+             clip-path="url(#print-2)" preserveAspectRatio="xMidYMid meet"/>
+    </svg></div>
+      <div class="tee"><svg viewBox="0 0 300 340" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <clipPath id="print-3"><rect x="90" y="70" width="120" height="150"/></clipPath>
+        <linearGradient id="fabric-3" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#2e3436"/>
+          <stop offset="1" stop-color="#181c1d"/>
+        </linearGradient>
+        <radialGradient id="glow-3" cx="50%" cy="45%" r="60%">
+          <stop offset="0" stop-color="#1c2420"/>
+          <stop offset="100%" stop-color="#111511" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <ellipse cx="150" cy="170" rx="155" ry="175" fill="url(#glow-3)"/>
+      <path d="M95,10 L55,0 L2,55 L35,95 L58,80 L58,330 L242,330 L242,80 L265,95 L298,55 L245,0 L205,10
+               C203,42 180,62 150,62 C120,62 97,42 95,10 Z"
+            fill="url(#fabric-3)" stroke="rgba(139,224,106,0.55)" stroke-width="2"/>
+      <image href="images/img-09.png" x="70" y="60" width="160" height="73.4"
+             clip-path="url(#print-3)" preserveAspectRatio="xMidYMid meet"/>
+    </svg></div>
+    </div>
+    <p class="merch-note">Final reward tiers and designs will be confirmed when the funding campaign goes live.</p>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <p class="footer-tag">An original dystopian series, built in the open by one person and a growing community.</p>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/Art_Nfavst" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@posthumans_series" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://x.com/posthumans_series" target="_blank" rel="noopener">X</a>
+      </div>
+    </div>
+    <p class="footer-note">About the images: the visuals on this page are concept art created with AI-assisted tools to visualize the world. The series itself is planned with real actors and a full production.</p>
+    <p class="footer-bottom">© 2026 Posthumans. A series by Nfavst.</p>
+  </footer>
+
+</body>
+</html>
