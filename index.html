@@ -64,6 +64,15 @@
   .premise .plan strong { color: var(--toxic); font-weight: 500; }
   .premise .fans { font-size: 0.85rem; letter-spacing: 0.04em; color: var(--ink); margin-top: 1.4rem; }
 
+  /* ---------- PLAYLIST ---------- */
+  .sound { padding: 1rem 6vw 5rem; max-width: 980px; }
+  .sound h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: 0.6rem; }
+  .sound p { color: var(--ink-dim); font-weight: 300; line-height: 1.7; max-width: 52ch; margin-bottom: 1.4rem; }
+  .sound .player { min-height: 80px; }
+  .sound .player iframe { display: block; border: 0; border-radius: 12px; width: 100%; height: 352px; }
+  .sound .pill { margin-top: 0; cursor: pointer; background: transparent; font-family: inherit; color: var(--toxic); border: 1px solid var(--toxic); padding: 0.7rem 1.1rem; opacity: 1; }
+  .sound .fine { margin-top: 0.9rem; }
+
   /* ---------- CHARACTERS ---------- */
   .characters { padding: 2rem 6vw 6rem; }
   .characters h2, .world h2, .creator h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: 0.6rem; }
@@ -186,6 +195,16 @@
     <p>Two humanities split apart. The chosen live above a toxic cloud and no longer die. The naturals stay below and endure. One man walks between them, chasing a name he doesn't understand.</p>
     <p class="fans">For fans of Blade Runner, Altered Carbon and Total Recall.</p>
     <p class="plan"><strong>The goal: a real series.</strong> Real actors, a real crew, real sets. The images and the teaser you see here are AI-made concept art, built to show the world before asking for anything. If the vote succeeds, the series will be shot for real.</p>
+  </section>
+
+  <section class="sound" id="sound">
+    <div class="section-label">The sound of the writing</div>
+    <h2>The playlist that kept me company while I wrote.</h2>
+    <p>Not the soundtrack of the series. Just the music I listened to while building its world, scene after scene.</p>
+    <div class="player" id="player">
+      <button class="pill" id="load-player" type="button">Load the playlist</button>
+      <p class="fine">Loads the Spotify player on click. <a href="https://open.spotify.com/playlist/7DPJqLqtkySQWP6RXvAETd" target="_blank" rel="noopener" style="color:var(--toxic)">Or open it on Spotify</a>.</p>
+    </div>
   </section>
 
   <section class="characters">
@@ -343,5 +362,23 @@
     <p class="footer-bottom">© 2026 Posthumans. A series by Nfavst.</p>
   </footer>
 
+<script>
+(function () {
+  var btn = document.getElementById('load-player');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var box = document.getElementById('player');
+    var f = document.createElement('iframe');
+    f.setAttribute('data-testid', 'embed-iframe');
+    f.src = 'https://open.spotify.com/embed/playlist/7DPJqLqtkySQWP6RXvAETd?utm_source=generator&si=bccc32b6118a4898';
+    f.width = '100%'; f.height = '352'; f.setAttribute('frameBorder', '0');
+    f.setAttribute('allowfullscreen', '');
+    f.setAttribute('allow', 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture');
+    f.title = 'Posthumans writing playlist on Spotify';
+    box.innerHTML = '';
+    box.appendChild(f);
+  });
+})();
+</script>
 </body>
 </html>
