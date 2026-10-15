@@ -169,6 +169,15 @@
     .hero::before, .hero-tagline, .hero-logline, .hero .socials { animation: none !important; }
     html { scroll-behavior: auto; }
   }
+
+  .vote { margin: 0 0 2.4rem; padding: 1.6rem; border: 1px solid var(--toxic); max-width: 560px; }
+  .vote h3 { font-family: 'Space Grotesk', sans-serif; text-transform: uppercase; font-size: 1.1rem; margin-bottom: .6rem; }
+  .vote p { font-size: .95rem; line-height: 1.6; margin-bottom: .8rem; }
+  .vote .count { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.8rem; color: var(--toxic); }
+  .vote .bar { height: 6px; background: rgba(255,255,255,.12); margin: .4rem 0 .3rem; }
+  .vote .bar i { display: block; height: 100%; background: var(--toxic); }
+  .vote .ms { font-size: .78rem; color: var(--ink-dim); margin-bottom: 1.2rem; }
+  .vote ol { margin: 0 0 1.2rem 1.2rem; font-size: .92rem; line-height: 1.6; }
 </style>
 </head>
 <body>
@@ -328,8 +337,17 @@
     <p class="lead">One click. Free. No donation, no commitment.</p>
     <p class="goal">Your vote is the first step toward shooting Posthumans for real, with real actors and a real crew, not with AI.</p>
     <p class="slogan">The first sci-fi series built with its audience, not just for it.</p>
-    <div class="signup"><a class="cta" href="https://www.edc-funding.com/fr/posthumans_series" target="_blank" rel="noopener">Vote now</a><p class="fine">The vote runs on EDC Funding until December 6. If the 150-vote threshold is reached, the funding campaign opens and voters are told first. If not, nothing launches and no money is asked.</p></div>
-    <div class="signup" style="margin-top:1.6rem"><a class="pill" href="https://tally.so/r/NpkKBl" target="_blank" rel="noopener">Notify me at launch</a></div>
+    <div class="vote">
+      <h3>Vote to make it exist</h3>
+      <div class="count">23 / 150 votes</div>
+      <div class="bar"><i style="width:15%"></i></div>
+      <p class="ms">Updated on 15 Oct 2026. 150 votes by December 6 unlocks the real funding campaign.</p>
+      <p>Voting takes place on EDC Funding, the French crowdfunding platform founded for veterans. It's free and takes about a minute:</p>
+      <ol><li>Create a free account (1 minute).</li><li>Click <b>Vote</b>.</li><li>That's it. No payment, no donation.</li></ol>
+      <a class="cta" href="https://www.edc-funding.com/fr/posthumans_series" target="_blank" rel="noopener">Vote on EDC Funding</a>
+      <p class="fine">The page is in French; the Vote button is on the project page. If the 150-vote threshold is reached, the funding campaign opens and voters are told first. If not, nothing launches and no money is asked.</p>
+    </div>
+    <div class="signup" style="margin-top:1.6rem"><a class="pill" href="https://tally.so/r/NpkKBl" target="_blank" rel="noopener">Get updates by email</a></div>
     <div class="socials">
       <a href="https://www.instagram.com/Art_Nfavst" target="_blank" rel="noopener">Follow on Instagram</a>
       <a href="https://www.tiktok.com/@posthumans.series" target="_blank" rel="noopener">Follow on TikTok</a>
